@@ -1,0 +1,54 @@
+{
+    "stage": "Stage 1 - Vaccination initiation alarm",
+    "model": "Logistic Regression",
+    "deployment_role": "primary early-warning model",
+    "outcome": "never_vaccinated",
+    "context_features": [
+        "province_code",
+        "B4K7BLN"
+    ],
+    "engagement_features": [
+        "I23",
+        "I26",
+        "I29",
+        "dev_recent_known_status",
+        "I24",
+        "I27",
+        "dev_known_windows",
+        "dev_engaged_windows",
+        "dev_missed_windows",
+        "dev_engagement_ratio",
+        "dev_max_consecutive_missed"
+    ],
+    "categorical_features": [
+        "province_code",
+        "I23",
+        "I26",
+        "I29",
+        "dev_recent_known_status"
+    ],
+    "numeric_features": [
+        "B4K7BLN",
+        "I24",
+        "I27",
+        "dev_known_windows",
+        "dev_engaged_windows",
+        "dev_missed_windows",
+        "dev_engagement_ratio",
+        "dev_max_consecutive_missed"
+    ],
+    "i30_definition": {
+        "1": "Monitored",
+        "2": "Confirmed missed monitoring",
+        "3": "Unknown / record unavailable; excluded",
+        "7": "Not applicable; excluded"
+    },
+    "strict_consecutive_miss_definition": "Only uninterrupted sequential code-2 observations are counted. Unknown, missing, monitored, or not-applicable periods break the sequence.",
+    "prototype_low_to_moderate_threshold": 0.18505659523534393,
+    "prototype_moderate_to_high_threshold": 0.7025934941406393,
+    "age_range_months": [
+        12,
+        23
+    ],
+    "note": "Minimal proof-of-concept model derived from cross-sectional SKI 2023 data. The model score is an early-warning concern score, not a prospectively validated clinical probability."
+}
