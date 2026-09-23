@@ -1,0 +1,23 @@
+{
+  "name": "VaxEngage v3",
+  "framework": "Minimal context + routine child-health service engagement",
+  "stage_1": {
+    "role": "Primary early-warning model",
+    "model": "Logistic Regression",
+    "held_out_roc_auc": 0.873335,
+    "context_only_roc_auc": 0.729243,
+    "engagement_only_roc_auc": 0.840317,
+    "low_to_moderate_threshold": 0.18505659523534393,
+    "moderate_to_high_threshold": 0.7025934941406393
+  },
+  "stage_2": {
+    "role": "Secondary completion-follow-up model",
+    "model": "Logistic Regression",
+    "held_out_roc_auc": 0.686583,
+    "context_only_roc_auc": 0.656619,
+    "engagement_only_roc_auc": 0.631844,
+    "low_to_moderate_threshold": 0.2957980026139434,
+    "moderate_to_high_threshold": 0.6457564958907474
+  },
+  "warning": "Cross-sectional proof-of-concept; prospective validation required."
+}
